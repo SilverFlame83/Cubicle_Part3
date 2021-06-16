@@ -8,7 +8,7 @@ const schema = new Schema({
     difficulty: { type: Number, min: 1, max: 6 },
     comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
     accessories: [{ type: Schema.Types.ObjectId, ref: 'Accessory' }],
-    creatorId:{ type: Schema.Types.ObjectId, ref:'User'}
+    author:{ type: Schema.Types.ObjectId, ref:'User'}
 });
 
 module.exports = model('Cube', schema);
